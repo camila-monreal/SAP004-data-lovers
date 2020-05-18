@@ -230,7 +230,6 @@ describe('sortData', () => {
     const dataTeste = [{name:"camila"},{name: "paloma"}, {name: "elaine"}]
     expect(sortData(dataTeste, "")).toBe(undefined);
   });
-
 });
 describe('computeStatus', () => {
   it('is a function', () => {

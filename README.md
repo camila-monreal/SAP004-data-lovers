@@ -37,7 +37,7 @@ o que já tem na web?
 ## Protótipo 
 
 Fizemos algumas versões em papel e lápis, e depois com as idéias criamos o primeiro protótipo de baixa fidelidade, utilizamos a ferramenta figma.
- ![] (/data/src/img/prototipo-readme.jpg)
+ ![](src/img/prototipo-readme.jpg)
  
 ***
 
