@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rick e Morty</title>
+  <link rel="icon" 
+      type="image/jpg" 
+      href="img/morty-icon.svg" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="style-page.css" />
 </head>
@@ -13,7 +16,8 @@
   <header class="main-menu">
     <img class="img-logo" src="img/logo.png">
     <select id="select-options" class="filter" name="select">
-      <option value="filter">Filter characters</option>
+      <option>Filter characters</option>
+      <option>Return to all characters</option>
       <optgroup label="Species">
         <option value="human">Human</option>
         <option value="alien">Alien</option>
@@ -30,6 +34,7 @@
         <option value="unknown-gender">Unknown</option>
       </optgroup>
     </select>
+
     <select id="button-order-characters" class="order-button">
       <optgroup label="Filter characters">
         <option>Filter</option>
@@ -38,8 +43,8 @@
       </optgroup>
     </select>
     <div class="paragrafo">
-      <p class="alive-count" id="count-alive"></p>
-      <p class="dead-count" id="count-dead"></p>
+      <p class="count" id="count"></p>
+      <p class="porcentage" id="porcentage"></p>
     </div>
     <a href="index.html"> <img class="button-home" src="img/home.svg" /></a>
   </header>

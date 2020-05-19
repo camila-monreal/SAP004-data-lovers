@@ -1,5 +1,5 @@
 
-import { filterData, sortData, computeStatus } from '../src/data.js';
+import { filterData, sortData, computeStatus, computeStatusPorcentage } from '../src/data.js';
 
 const data = [{
     "id": 1,
@@ -199,7 +199,7 @@ describe('filterData', () => {
   });
 
   it('returns', () => {
-    expect(filterData(data,'')).toMatchObject([]);
+    expect(filterData(data,'')).toMatchObject(data);
   });
 });
 
@@ -214,21 +214,13 @@ describe('sortData', () => {
     expect(sortData(data, "z-a")).toMatchObject(sortResultZa);
   });
 
-  it('returns ordered (a-z) characthers', () => {
-    const dataTeste = [{name:"paloma"},{name: "camila"}, {name: "elaine"}]
-    const sortResultAz= [dataTeste[1], dataTeste[2], dataTeste[0]];
-    expect(sortData(dataTeste, "a-z")).toMatchObject(sortResultAz);
+  it('returns ordered (a-z) characthers', () => { 
+    const sortResultAz= [data[1], data[0], data[2]];
+    expect(sortData(data, "a-z")).toMatchObject(sortResultAz);
   });
 
-  it('returns ordered (a-z) characthers', () => {
-    const dataTeste = [{name:"camila"},{name: "paloma"}, {name: "elaine"}]
-    const sortResultAz= [dataTeste[0], dataTeste[2], dataTeste[1]];
-    expect(sortData(dataTeste, "a-z")).toMatchObject(sortResultAz);
-  });
-
-  it('returns ordered (z-a) characthers', () => {
-    const dataTeste = [{name:"camila"},{name: "paloma"}, {name: "elaine"}]
-    expect(sortData(dataTeste, "")).toBe(undefined);
+  it('returns', () => {
+    expect(sortData(data, "")).toBe(data);
   });
 });
 describe('computeStatus', () => {
@@ -236,8 +228,90 @@ describe('computeStatus', () => {
     expect(typeof computeStatus).toBe('function');
   });
 
-  it('return correct count', () => {
-    const countReturn = {"alive": 3, "dead": 0}
-    expect(computeStatus(data, 'alive')).toMatchObject(countReturn);
+  it('returns 3 human characters', () => {
+    expect(computeStatus(data,'human')).toBe(3);
+  });
+
+  it('returns 0 count alien characters', () => {
+    expect(computeStatus(data,'alien')).toBe(0);
+
+  });
+
+  it('returns 0 unknown characters', () => {
+    expect(computeStatus(data,'unknown')).toBe(0);
+  });
+
+  it('returns 3 alive characters', () => {
+    expect(computeStatus(data,'alive')).toBe(3);
+  });
+
+  it('returns 0 dead characters', () => {
+    expect(computeStatus(data,'dead')).toBe(0);
+  });
+
+  it('returns 0 unknown-status characters', () => {
+    expect(computeStatus(data,'unknown-status')).toBe(0);
+  });
+  
+  it('returns 1 character female', () => {
+    expect(computeStatus(data,'female')).toBe(1);
+  });
+
+  it('returns 2 characters male', () => {
+    expect(computeStatus(data,'male')).toBe(2);
+  });
+
+  it('returns 0 unknown-gender characters', () => {
+    expect(computeStatus(data,'unknown-gender')).toBe(0);
+  });
+
+  it('returns', () => {
+    expect(computeStatus(data,'')).toBe("");
+  });
+});
+describe('computeStatusPorcentage', () => {
+  it('is a function', () => {
+    expect(typeof computeStatusPorcentage).toBe('function');
+  });
+  
+  it('returns 100% human characters', () => {
+    expect(computeStatusPorcentage(data,'human')).toBe(100);
+  });
+
+  it('returns 0 count alien characters', () => {
+    expect(computeStatusPorcentage(data,'alien')).toBe(0);
+
+  });
+
+  it('returns 0% unknown characters', () => {
+    expect(computeStatusPorcentage(data,'unknown')).toBe(0);
+  });
+
+  it('returns 100% alive characters', () => {
+    expect(computeStatusPorcentage(data,'alive')).toBe(100);
+  });
+
+  it('returns 0% dead characters', () => {
+    expect(computeStatusPorcentage(data,'dead')).toBe(0);
+  });
+
+  it('returns 0% unknown-status characters', () => {
+    expect(computeStatusPorcentage(data,'unknown-status')).toBe(0);
+  });
+  
+  it('returns 33% character female', () => {
+    expect(computeStatusPorcentage(data,'female')).toBe(33);
+  });
+
+  it('returns 67% characters male', () => {
+    expect(computeStatusPorcentage(data,'male')).toBe(67);
+  });
+
+  it('returns 0% unknown-gender characters', () => {
+    expect(computeStatusPorcentage(data,'unknown-gender')).toBe(0);
+  });
+
+  it('returns', () => {
+    expect(computeStatusPorcentage(data,'')).toBe("");
   });
 });

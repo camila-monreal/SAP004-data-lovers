@@ -7,11 +7,9 @@ Pesquisa de usuário:
 
 * Persona: Usa Netflix ou TV paga, gosta de animação, gosta de humor negro.
 
-* Como usuário quer saber as caracteristicas de cada personagem, para entender melhor do universo Rick and Morty.
-
-* O que elas precisam? 
-Acessar os dados dos personagens de forma amigável;
-Acessar por alguma caracteristica. (Filtrar informações)
+O que os usuários precisam? 
+* Acessar os dados dos personagens de forma amigável;
+* Acessar por alguma caracteristica. (Filtrar informações)
 
 ***
 
@@ -30,7 +28,8 @@ o que já tem na web?
 ## História de Usuário
 * Será possível visualizar a lista completa, com todos os personagens disponíveis na tela.
 * Ele irá poder filtrar de algumas formas a visualização desses personagens, entender quem é cada personagem.
-* Será possivel ordenar os personagens de a-z e de z-a
+* Será possivel ordenar os personagens de a-z e de z-a.
+* Será possível visualizar a quantidade e porcentagem de personagens com a caracteristica filtrada.
 
 ***
 
@@ -49,7 +48,4 @@ Melhorias realizadas:
 * Colocar link de entrada na imagem de portal da home;
 * Mudar saturação da cor de fundo.
 
-Melhorias pendentes: 
-* Interligar a opção de filtrar e ordenar, a pessoa consegue fazer apenas um ou outro, sempre que for ordenar ou filtrar deve limpar a tela voltando na tela principal - A  melhoria: Colocar um botão de limpar, e/ou interligar as funções para funcionamento mais inteligente;
-* Melhorar a função computStatus e sua apresentação - A melhoria: Colocar mais dados e estilizar melhor a demonstração.
 
