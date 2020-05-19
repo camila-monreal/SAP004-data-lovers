@@ -19,7 +19,6 @@ body {
     line-height: 1.6em;
     border-radius: 15px;
     width: 150px;
-    height: auto;
     color: #fff;
     padding: 20px;
     position: absolute;
@@ -32,7 +31,7 @@ body {
     position: absolute;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-bottom: 20px solid #2D9245;
+    border-bottom: 2px solid #2D9245;
     top: -20px;
     left: 10%;
 }
@@ -54,7 +53,6 @@ body {
         line-height: 1.6em;
         border-radius: 15px;
         width: 150px;
-        height: auto;
         color: #fff;
         padding: 20px;
         position: absolute;
@@ -99,14 +97,13 @@ body {
         text-align: center;
     }
     .balao2:after {
-        /*Triangulo*/
         content: "";
         width: 0;
         height: 0;
         position: absolute;
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
-        border-bottom: 20px solid #2D9245;
+        border-bottom: 21px solid #2D9245;
         top: -20px;
         left: 20%;
     }
@@ -160,7 +157,7 @@ body {
         position: absolute;
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
-        border-bottom: 20px solid #2D9245;
+        border-bottom: 22px solid #2D9245;
         top: -20px;
         left: 20%;
     }
@@ -224,7 +221,6 @@ body {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 80%;
         width: 100px;
-        height: auto;
         color: #fff;
         padding: 5px;
         position: relative;
@@ -237,7 +233,7 @@ body {
         position: absolute;
         border-left: 16px solid transparent;
         border-right: 16px solid transparent;
-        border-bottom: 20px solid #2D9245;
+        border-bottom: 21px solid #2D9245;
         top: -20px;
         left: 60%;
     }
